@@ -2,7 +2,7 @@ module.exports = {
 
   development: {
     client: 'pg',
-    connection: 'postgres://homepc:homepc@localhost/userform'
+    connection: 'postgres://satya:satya@localhost/userform'
   }
 
 };
