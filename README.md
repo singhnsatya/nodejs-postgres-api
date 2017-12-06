@@ -7,7 +7,8 @@ cd nodejs-postgres-api
 3. createdb database userforms
 4. knex migrate:latest -> this will create table in your database
 
-ux setup
+ux setup:
+
 cd ux
 
 1. npm install
