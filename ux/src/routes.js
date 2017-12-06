@@ -10,7 +10,7 @@ class Routes extends React.Component {
 			<Router history = {history}>
 			<div>
 			<Route exact path = "/" component={Home} />
-			<Route exact path = "/list" component={List} />
+			<Route path = "/list" component={List} />
 			</div>
 			</ Router>
 		)
