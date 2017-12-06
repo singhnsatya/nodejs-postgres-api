@@ -1,11 +1,18 @@
 const queries = require('../db/queries');
 
 module.exports = (app) => {
-	app.get('/users', async (req, res, next) => {
-		var users = await queries.getAll()
-		res.status(200).json({
-			success: true,
-			users
+	app.get('/users', (req, res, next) => {
+		queries.getAll()
+		.then(users => {
+			res.status(200).json({
+				success: true,
+				users
+			})
+		}).catch(error => {
+			res.status(400).json({
+				success: true,
+				error
+			})
 		})
 	})
 
@@ -13,7 +20,7 @@ module.exports = (app) => {
 		req.check('name', 'Name should not be empty').notEmpty();
 		req.check('age', 'Age must be an number').isDecimal();
 		req.check('gender', 'Gender should not be empty').notEmpty();
-		req.check('number', 'Number must be an integer').isDecimal().isLength({ min: 10 });
+		req.check('number', 'Number must not be empty').notEmpty();
 		req.check('email', 'Email is not valid').isEmail();
 
 		var errors = req.validationErrors();

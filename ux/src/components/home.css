@@ -1,0 +1,29 @@
+#user-form {
+	margin: auto;
+	border: 1px solid;
+	width: 500px;
+	height: 550px;
+	padding-left: 60px;
+	box-shadow: 2px 1px 15px #888888;
+}
+
+.btn-submit {
+	margin-top: 40px;
+}
+
+.btn-reset {
+	margin-left: 60px;
+}
+
+.form-title{
+	color: #1A237E;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+#msg {
+	font-size: 20px;
+	color: #1A237E;
+	font-weight: bold;
+	margin-left: 35%;
+}

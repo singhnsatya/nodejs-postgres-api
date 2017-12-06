@@ -5,9 +5,9 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('users', (table) => {
   	table.increments();
   	table.text('name');
-  	table.integer('age');
+  	table.text('age');
   	table.text('gender');
-  	table.integer('number');
+  	table.text('number');
   	table.text('email');
   })
 };
