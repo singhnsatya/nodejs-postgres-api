@@ -9,7 +9,7 @@ cd nodejs-postgres-api
     create database userform;<br/>
     create role admin with login password 'passwordyouwant';<br/>
     grant all privileges on all tables in schema public to admin;
-6. update your knex file add connection details //postgres://admin:passwordforadmin@localhost/userform
+6. update your knex file add connection details --> postgres://admin:passwordforadmin@localhost/userform
 7. knex migrate:latest -> this will run the migration file from your migration folder and create the table in postgres
 8. start your server
 9. node index.js -> http://localhost:3030
